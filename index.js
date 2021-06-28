@@ -10,16 +10,19 @@ keys.addEventListener("click", e => {
     const displayedNum = display.textContent
     const previousKey = calculator.dataset.previousKey
 
-    console.log(key,action)
-    console.log(keyContent,displayedNum)
+    // console.log(key,action)
+    // console.log(keyContent,displayedNum)
     if (!action) {
-        console.log('number key!')
+        // console.log('number key!', displayedNum)
         calculator.dataset.previousKey = 'num'
-        if(displayedNum ==='0' || previousKey === 'op' || previousKey === 'clc'){
+        if(displayedNum === '0' || previousKey === 'op' || previousKey === 'clc'){
             display.textContent = keyContent
+            // console.log('check')
         }
         else{
-            display.textContent = displayedNum + keyContent
+            if(displayedNum.length < 15){
+                display.textContent = displayedNum + keyContent
+            }
         }
     }
     if (
@@ -28,18 +31,18 @@ keys.addEventListener("click", e => {
         action === 'multiply' ||
         action === 'divide'
       ) {
-        console.log('operator key!')
+        // console.log('operator key!')
 
         const firstValue = calculator.dataset.firstValue
         const operator = calculator.dataset.operator
         const secondValue = displayedNum
-        console.log(firstValue, operator, secondValue, previousKey)
+        // console.log(firstValue, operator, secondValue, previousKey)
 
         if( firstValue && operator && previousKey !== 'op' && previousKey !== 'clc'){
             const calc = solve(firstValue, operator, secondValue)
             display.textContent = calc
             calculator.dataset.firstValue = display.textContent
-            console.log('second value stored')
+            // console.log('second value stored')
         }
         else{
             calculator.dataset.firstValue = displayedNum
@@ -49,7 +52,7 @@ keys.addEventListener("click", e => {
       }
 
       if (action === 'decimal') {
-        console.log('decimal key!')
+        // console.log('decimal key!')
         calculator.dataset.previousKey = 'dec'
         if(! displayedNum.includes('.')){
             display.textContent = displayedNum + '.'
@@ -61,7 +64,7 @@ keys.addEventListener("click", e => {
       
       if (action === 'clear') {
         calculator.dataset.previousKey = 'clr'
-        console.log('clear key!')
+        // console.log('clear key!')
         calculator.dataset.firstValue = ''
         calculator.dataset.secondValue = ''
         calculator.dataset.operator = ''
@@ -70,7 +73,7 @@ keys.addEventListener("click", e => {
       }
       
       if (action === 'calculate') {
-        console.log('equal key!')
+        // console.log('equal key!')
         let firstValue = calculator.dataset.firstValue
         const operator = calculator.dataset.operator
         let secondValue = displayedNum

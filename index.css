@@ -16,8 +16,8 @@ h1{
     font-size: xx-large;
     font-weight: bold;
     text-align: right;
-    width: 70vw;
-    height: 7vw;
+    width: 50vw;
+    height: 5vw;
     margin: auto;
 }
 
@@ -29,6 +29,6 @@ h1{
     display: grid;
     margin: auto;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    width: 70vw;
-    height: 30vw;
+    width: 50vw;
+    height: 20vw;
 }

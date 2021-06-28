@@ -12,13 +12,17 @@ h1{
 .display{
     background-color: black;
     padding-right: 0.2em;
+    padding-left: 0.2em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
     color: green;
     font-size: xx-large;
     font-weight: bold;
     text-align: right;
     width: 50vw;
-    height: 5vw;
+    height: auto;
     margin: auto;
+    word-wrap: break-word;
 }
 
 .operator{
@@ -31,4 +35,6 @@ h1{
     grid-template-columns: 1fr 1fr 1fr 1fr;
     width: 50vw;
     height: 20vw;
+    padding-right: 0.2em;
+    padding-left: 0.2em;
 }

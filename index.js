@@ -20,9 +20,7 @@ keys.addEventListener("click", e => {
             // console.log('check')
         }
         else{
-            if(displayedNum.length < 15){
-                display.textContent = displayedNum + keyContent
-            }
+            display.textContent = displayedNum + keyContent    
         }
     }
     if (

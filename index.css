@@ -1,0 +1,34 @@
+h1{
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+    color: brown;
+}
+.calculator{
+    text-align: center;
+    padding: 0.5em;
+    margin: auto;
+}
+.display{
+    background-color: black;
+    padding-right: 0.2em;
+    color: green;
+    font-size: xx-large;
+    font-weight: bold;
+    text-align: right;
+    width: 70vw;
+    height: 7vw;
+    margin: auto;
+}
+
+.operator{
+    background-color: orange;
+}
+
+.calc_keys{
+    display: grid;
+    margin: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 70vw;
+    height: 30vw;
+}
